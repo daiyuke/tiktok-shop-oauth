@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: tiktok-shop-oauth
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npx tsx render-server.ts
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TIKTOK_APP_KEY
+        sync: false
+      - key: TIKTOK_APP_SECRET
+        sync: false
+      - key: TIKTOK_REDIRECT_URI
+        sync: false
+      - key: CONFIG_PATH
+        value: /opt/render/project/src/config.json
+    disk:
+      name: tiktok-config
+      mountPath: /opt/render/project/src
+      sizeGB: 1
