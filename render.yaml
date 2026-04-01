@@ -15,3 +15,9 @@ services:
         sync: false
       - key: TIKTOK_REDIRECT_URI
         sync: false
+      - key: CONFIG_PATH
+        value: /opt/render/project/src/config.json
+    disk:
+      name: tiktok-config
+      mountPath: /opt/render/project/src
+      sizeGB: 1
