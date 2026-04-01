@@ -8,9 +8,9 @@
     "tiktok-shop": "./tiktok-shop.ts"
   },
   "scripts": {
-    "start": "tsx tiktok-shop.ts",
+    "start": "tsx render-server.ts",
     "start:oauth": "tsx oauth-server.ts",
-    "start:render": "tsx render-server.ts",
+    "start:cli": "tsx tiktok-shop.ts",
     "build": "tsc",
     "deploy:render": "echo 'Push to GitHub and connect to Render'"
   },
