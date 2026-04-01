@@ -10,7 +10,7 @@
   "scripts": {
     "start": "tsx render-server.ts",
     "start:oauth": "tsx oauth-server.ts",
-    "start:cli": "tsx tiktok-shop.ts",
+    "start:cli": "tsx cli/tiktok-shop.ts",
     "build": "tsc",
     "deploy:render": "echo 'Push to GitHub and connect to Render'"
   },
