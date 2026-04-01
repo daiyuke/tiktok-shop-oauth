@@ -19,8 +19,8 @@ const APP_KEY = process.env.TIKTOK_APP_KEY;
 const APP_SECRET = process.env.TIKTOK_APP_SECRET;
 const REDIRECT_URI = process.env.TIKTOK_REDIRECT_URI;
 
-// 可选：配置存储路径（Render 有持久化磁盘时使用）
-const CONFIG_PATH = process.env.CONFIG_PATH || path.join(__dirname, 'config.json');
+// 配置存储路径 - 在 Render 免费版使用临时目录
+const CONFIG_PATH = process.env.CONFIG_PATH || path.join('/tmp', 'tiktok-config.json');
 
 interface TikTokConfig {
   app_key: string;
